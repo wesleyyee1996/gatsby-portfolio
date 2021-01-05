@@ -1,8 +1,8 @@
 module.exports = {
-  SiteTitle: 'Abdelali',
+  SiteTitle: 'Wesley Yee',
   Sitelogo: '#',
-  SiteLogoText: 'Abdelali',
-  SiteAuthor: 'Abdelali Dahir',
+  SiteLogoText: 'Wesley Yee',
+  SiteAuthor: 'Wesley Yee',
   SiteDescription: 'Front End Developer',
   defaultDescription: 'Software engineer!', 
   githubApiQuery: `query ($number_of_repos: Int!) {
@@ -43,8 +43,8 @@ module.exports = {
   }, 
   SiteSocialLinks: {
     twitter: 'https://twitter.com/AbdaliDahir',
-    github: 'https://github.com/AbdaliDahir',
-    linkedin: 'https://www.linkedin.com/in/abdelali-dahir-0b5344111/',
+    github: 'https://github.com/wesleyyee1996',
+    linkedin: 'https://www.linkedin.com/in/wesley-yee/',
   },
   SiteAddress: {
     city: 'Casablanca',
@@ -53,7 +53,7 @@ module.exports = {
     zipCode: 'ZipCode',
   },
   SiteContact: {
-    email: 'abdali.dahir@gmail.com',
+    email: 'wesleyyee1996@gmail.com',
     phone: 'phone number',
   },
   SiteCopyright: '2020',

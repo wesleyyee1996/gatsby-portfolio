@@ -1,7 +1,7 @@
 ---
-title: League of Legends
+title: Robotic Horse for Hippotherapy
 tags: ['Adobe xd', 'css', 'js', 'dashboard']
-category: mobile-ui
+category: robotics
 image: './salty_egg.jpg'
 date: "2015-05-01T22:12:03.284Z"
 description: "League of Legends is a multiplayer online battle arena video game developed and published by Riot Games for Microsoft Windows and macOS. Inspired by Defense of the Ancients, the game follows a freemium model. The game was released on October 27, 2009"

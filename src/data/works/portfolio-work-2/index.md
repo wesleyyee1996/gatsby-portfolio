@@ -1,39 +1,32 @@
 ---
-title: portfolio-work-2
-date: "2015-05-28T22:40:32.169Z"
-category: web design
-tags: ['Front End', 'css', 'js', 'dashboard']
-image: './blog-image.jpg'
-description: "Radio buttons and checkboxes have long been components that cause users confusion. These components are often used in the same context, but look completely different."
+title: Search Engine
+date: "2020-12-21T22:40:32.169Z"
+category: distributed computing
+tags: ['back-end', 'java', 'aws', 'web crawling', 'MySQL', 'BerkeleyDB']
+image: './image5.png'
+description: "As the final project of my CIS 555 (Distributed Systems) class, I worked on a team of four to build a replica of Google's search engine circa 1995."
 ---
+![alt text](./image5.png)
+<br />
+Over the course of two weeks, my CIS 555 team built a distributed, fault-tolerant search engine inspired by Google which was completely hosted on AWS. As the project was quite large, the main functionality was broken into four sub-components:
+- a scalable, distributed Crawler capable of downloading 160,000+ pages per hour.
+- an agile Indexer which is highly scalable given its distributed database, and which responds in less than 0.2 seconds even to long queries.
+- a Pagerank component that computes score for each page efficiently and mitigates pagerank sink & hoarding & dangling links. Also provides data access through web API or database query. 
+- a Search Engine which returns relevant results in real-time by querying all the other components above.  
 
-Radio buttons and checkboxes have long been components that cause users confusion. These components are often used in the same context, but look completely different. Designers and developers know the difference, but that’s because they learned it through their work. What about users who were never taught the difference?
+<br />
 
-The fact that users need to be taught the difference shows that these two components are not intuitive. Their appearance alone does not convey their slight differences in functionality. The visual cues themselves—a dot and checkmark—carry no specific meaning to users other than an option selection. Therefore, the existence of both radio buttons and checkboxes violates the UX principle of Consistency.
-
-Designers and developers have never questioned their co-existence because it’s the way it’s always been. However, if their co-existence causes users confusion and violates a UX principle, it merits a logical analysis and rethinking.
-
-A Violation of Consistency
+Crawler
 --------------------------
-
-The UX principle of Consistency states that components with similar functionality and same usage should have a uniform appearance. Radio buttons and checkboxes have a similar function and are used in the same context, but there’s nothing uniform about their appearance.
-
-Radio buttons represent mutually exclusive selections, while checkboxes represent mutually inclusive ones. Both are commonly used together on forms to select options from a list. However, a radio button is a circle with a dot inside, while a checkbox is a square with a checkmark inside—two different visual cues.
-
-Some might say that their functions are different, so they should look different. But to be precise, their functions are only slightly different, and they both have the same usage, which is not enough to justify a different appearance. Doing so presents an inconsistency that can perplex users.
-
-Mutual Exclusivity/Inclusivity Is Not a User Concern
-----------------------------------------------------
-
-If you ask the typical user what a mutually exclusive or inclusive option is, they probably wouldn’t be able to tell you. That’s because they don’t think about mutual exclusivity or inclusivity when they use an interface. Only designers and developers think about this because they have to design the interface.
-
-Users merely read the labels and select the options they want. They’re focused on what the labels say, not component functionality. Therefore, mutual exclusivity and inclusivity should be indicated in the labels they read, not the components themselves. Designers and developers are imposing their way of thinking onto the user.
-
-How Users Know They Can Select One or Multiple
-----------------------------------------------
-
-The label on the components often indicates whether users can select multiple options or just one. When users can select multiple options, the label is worded in plural form. When users can only select one option, the label is worded in the singular form. Make sure you use the correct noun form when you label mutually exclusive and inclusive components. It’s easy to forget about the labels, but they’re what matters most.
-
-Label noun forms are a clearer cue for mutual exclusivity/inclusivity than a checkmark and a dot. A checkmark and a dot do not signify mutual exclusivity/inclusivity other than by convention that’s familiar to only designers, developers, and tech-savvy users. Regular users who see the different components used in the same context will wonder what the visual differences mean. The inconsistency isn’t severe enough to derail their task, but it certainly diverts their attention.
-
+My main contribution to the project was building the web crawler that would generate the corpus for the other components to access. The crawler consisted of 8 distributed worker nodes and a single master node, all running on separate AWS EC2 instances. Due to limitations of AWS Educate accounts, I was limited to 9 separate EC2 instances, but on a normal account, would most likely have increased it to ~20 workers. Each crawler node utilized a "lite" version of the Apache Storm stream processing engine, which allowed for parallel processing. Webpage metadata was saved into an AWS RDS MySQL database, while the actual webpage contents were stored in an S3 bucket. The diagram below shows a rough outline of the architecture.
+<br /> <br />
+![alt text](./image6.png)
+<br /> <br />
+A major challenge when constructing the crawler was detecting and avoiding crawler (aka spider) traps. To overcome this, I implemented a URL Frontier queue in BerkeleyDB which varied the top-level-domain hostname that was sent to each worker and also allowed for larger-than-memory support. This resulted in a very diverse crawl while guaranteeing internet politeness, such that at most one worker requested from a single domain at a given time and respected robots.txt files. 
+<br /> <br />
+A second challenge was working within the limitations of the AWS Educate account since it didn't allow for creation of IAM roles. As a result, I wasn't able to use AWS Systems Manager to run shell commands on the worker instances remotely, and starting each worker manually proved to be a huge time sink. Additionally, as web crawling is computationally intensive by nature, I found out that I had run out of AWS Educate credits the morning of the final demo, which almost caused all of my AWS data to be deleted. Fortunately, AWS was kind enough to provide an extra 20 credits at no charge due to the circumstances!
+<br /> <br />
+In the end, the web crawler was able to download ~1.5 million web pages at a peak rate of 160,000+ pages per hour and occupied ~170 GB of disk space. The diagram below shows the crawling performance compared to the number of worker nodes. 
+![alt text](./image4.png)
+This was definitely one of the most challenging projects that I have worked on, but also the most rewarding. Distributed systems has to be one of the most fascinating fields in CS, and I have no doubt that this experience will prove to be extremely beneficial in my future robotics career.
 

@@ -1,8 +1,8 @@
 ---
-title: portfolio-work-3
+title: Robotic Arm Manipulator
 date: "2015-05-06T23:46:37.121Z"
-category: backend development
-tags: ['Adobe xd', 'css', 'js', 'dashboard']
+category: robotics
+tags: ['ROS', 'Matlab', 'path planning']
 image: './blog-image.jpg'
 description: "Not only that, but the second address field also caused them to split their input incorrectly in the address fields. This led to confusion and frustration among users."  
 ---
