@@ -20,7 +20,7 @@ const Navbar = ({ siteTitle }) => (
             <NavbarList>
               <li><Link to="/" className="lined-link" activeClassName="active"> <User /> <span> About </span> </Link></li> 
               <li><Link to="/works" className="lined-link" activeClassName="active"> <Briefcase /> <span> Projects </span> </Link></li>  
-              <li><a href="/resume.pdf" target="_blank" className="lined-link" activeClassName="active"> <Feather /> <span> Resume </span> </a></li>
+              <li><a href="https://s3.us-east-2.amazonaws.com/wesleyyee.com/Wesley_Yee_Resume.pdf" target="_blank" className="lined-link" activeClassName="active"> <Feather /> <span> Resume </span> </a></li>
                 {/* <li>
                   <div className="lined-link" activeClassName="active" style={{margin: '0 1rem', verticalAlign: 'top'}} >
                     <a href="resume.pdf" target="_blank"> 

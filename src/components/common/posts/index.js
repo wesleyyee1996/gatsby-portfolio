@@ -3,7 +3,7 @@ import variables from '../../../data/variables';
 
 export const Intro = styled.div`
   padding: 2rem 0 4rem 0;
-  font-family: "GT-Walsheim-Pro-Regular";
+  font-family: 'Open Sans', sans-serif;
 `;
 export const HeaderIntro = styled.header`
   display: grid;
@@ -13,7 +13,7 @@ export const HeaderIntro = styled.header`
   margin-bottom: 6rem;
 `
 export const Title = styled.h1`
-  font-family: "GT-Walsheim-Pro-Bold";
+  font-family: 'Open Sans', sans-serif;
   font-size: 2rem;
   text-transform: capitalize;
   @media(max-width: ${variables.breakpointPhone}) {
@@ -23,7 +23,7 @@ export const Title = styled.h1`
 export const SubTitle = styled.h3`
   font-size: 2rem;
   text-transform: capitalize;
-  font-family: "GT-Walsheim-Pro-Bold";
+  font-family: 'Open Sans', sans-serif;
   text-decoration: underline;
 `
 export const Text = styled.p`
@@ -95,7 +95,7 @@ export const WorkPost = styled.article`
   }
 `
 export const Category = styled.span`
-  font-family: "GT-Walsheim-Pro-Bold";
+  font-family: 'Open Sans', sans-serif;
   color: ${variables.primary};
   text-transform: uppercase;
   letter-spacing: .05em;
