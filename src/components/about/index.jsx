@@ -21,8 +21,9 @@ const About = () => {
         <ContainerLayout>
           <AboutSection>
             <div>
-              <Avatar fluid={data.placeholderImage.childImageSharp.fluid} alt="user photo" />
-              
+              <Avatar fluid={data.placeholderImage.childImageSharp.fluid} alt="user photo">
+                <img src='https://s3.us-east-2.amazonaws.com/wesleyyee.com/Media/profile.webp' alt='profile' />
+              </Avatar>
             </div> 
             <div>
               <Title> Hi, I’m Wesley </Title>
