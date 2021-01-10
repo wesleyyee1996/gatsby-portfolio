@@ -66,6 +66,8 @@ const BlogPost = ({data, pageContext, location}) => {
   )
 }
 
+
+
 export default BlogPost;
 
 export const data = graphql`

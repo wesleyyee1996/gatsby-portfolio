@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Intro = styled.div`
-  padding: 8rem 0 4rem 0;
+  padding: 4rem 0 4rem 0;
   text-align: left;
 `;
 
@@ -32,7 +32,7 @@ export const SmallText = styled.small`
 export const ArticleBody = styled.div `
   margin-top: 5rem;
   p {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-family: "GT-Walsheim-Pro-Medium";
   }
 `

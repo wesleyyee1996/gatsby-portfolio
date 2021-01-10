@@ -1,43 +1,22 @@
 ---
 title: Robotic Horse for Hippotherapy
-tags: ['Adobe xd', 'css', 'js', 'dashboard']
+importance: 3
+tags: ['Arduino', 'Solidworks', 'Inverse Kinematics']
 category: robotics
-image: './salty_egg.jpg'
-date: "2015-05-01T22:12:03.284Z"
-description: "League of Legends is a multiplayer online battle arena video game developed and published by Riot Games for Microsoft Windows and macOS. Inspired by Defense of the Ancients, the game follows a freemium model. The game was released on October 27, 2009"
+image: './hipposdontlie.png'
+date: "2018-05-18T22:12:03.284Z"
+description: "My senior design team built a robotic horse (aptly named Stewie) using a 6-DOF Stewart Platform to accurately mimic various gait cycles used during hippotherapy"
 ---
 
+My senior design team (Kelsi Wicker, Matthew O'Gorman, James Phillips, Ruo Jia, Jijie Zhou, & myself) built a robotic horse (aptly named Stewie) using a 6-DOF Stewart Platform to accurately mimic various gait cycles used during hippotherapy. 
 
-Choose Your Champion
---------------------------
-Whether you like to dive straight into the fray, support your teammates, or something in between, there’s a spot for you on the Rift.
+By specifying the position and orientation of the horse's back at any given time, the seat could navigate to the corresponding location by moving each of 6 motors to a calculated position. The device was able to recreate any gait cycle within the workspace instantaneously, which was advantageous over mechanical mechanisms, which were limited to singular, cyclical motions.  We used an Arduino as the controller, and using the rotary position sensors on the motor shafts as feedback, were able to use PID control and inverse kinematics to set the desired motor speed and position.
 
-Assassin
+This project was named as a 2018 finalist for the World Congress of Biomechanics Undergraduate Design Competition in Dublin, Ireland. Our design team was fortunate to receive full funding to send everyone on the trip!
 
-![champion akali](https://lolstatic-a.akamaihd.net/frontpage/apps/prod/harbinger-l10-website/en-gb/production/en-gb/static/assassin-d64d3ffdda15e1eed637aefe6a2c7fee.png#imgresponsive)
+The poster for the end-of-year design showcase is below.
 
-Fighter
+![poster](./poster.png)
 
-![champion Yassuo](https://lolstatic-a.akamaihd.net/frontpage/apps/prod/harbinger-l10-website/en-gb/production/en-gb/static/fighter-7a08920b696ecdb673edeeae1d3c616e.png#imgresponsive)
 
-Mage
-
-![champion lux](https://lolstatic-a.akamaihd.net/frontpage/apps/prod/harbinger-l10-website/en-gb/production/en-gb/static/mage-3bfa6dfe620adafe5e539c2e470f4acc.png#imgresponsive)
-
-support
-
-![champion akali](https://lolstatic-a.akamaihd.net/frontpage/apps/prod/harbinger-l10-website/en-gb/production/en-gb/static/support-d63ae08baf517425864ddc020a5871d5.png#imgresponsive)
-
-I'm sure I'll write a lot more interesting things in the future.
-
-Oh, and here's a great quote from this Wikipedia on
-[salted duck eggs](https://en.wikipedia.org/wiki/Salted_duck_egg).
-
-> A salted duck egg is a Chinese preserved food product made by soaking duck
-> eggs in brine, or packing each egg in damp, salted charcoal. In Asian
-> supermarkets, these eggs are sometimes sold covered in a thick layer of salted
-> charcoal paste. The eggs may also be sold with the salted paste removed,
-> wrapped in plastic, and vacuum packed. From the salt curing process, the
-> salted duck eggs have a briny aroma, a gelatin-like egg white and a
-> firm-textured, round yolk that is bright orange-red in color.
 

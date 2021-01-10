@@ -43,7 +43,7 @@ export const CopyRight = styled.p`
 `
 export const FooterBody = styled.div`
 	display: grid;
-	grid-template-columns: 1fr 1fr;
+	grid-template-columns: 1fr;
 	align-items: center;
 	@media(max-width: ${variables.breakpointPhone}) {
 		grid-template-columns: 1fr;
@@ -52,13 +52,20 @@ export const FooterBody = styled.div`
 export const FooterSocialMedia = styled.ul`
 	list-style: none;
 	padding-left: 0;
+	display: grid
+	grid-template-columns: repeat(3, 1fr);
 	@media(max-width: ${variables.breakpointPhone}) {
 		display: flex;
-		align-items: center;
+		align-items: left;
 		justify-content: space-between;
+		grid-template-columns: repeat(3, 1fr);
 	}
 	li {
-		margin-bottom: 1.5rem;
+		//margin-bottom: 1.5rem;
+		padding: .5rem .2rem;
+    margin: 0 1rem;
+    text-decoration: none;
+    vertical-align: middle;
 	}
 `
 export const MediaLink = styled.a`

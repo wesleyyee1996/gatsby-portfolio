@@ -11,7 +11,7 @@ const WorkIndex = ({ data }) => {
   return (
     <>
       <Layout> 
-        <SEO title="Showcases" />
+        <SEO title="Projects" />
         <Intro>
           <ContainerLayout>
 
@@ -69,7 +69,7 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/(works)/"}}, sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/(works)/"}}, sort: { fields: [frontmatter___importance], order: ASC }) {
       edges {
         node {
           excerpt

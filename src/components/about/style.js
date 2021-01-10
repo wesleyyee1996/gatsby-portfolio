@@ -6,8 +6,8 @@ export const AboutSection = styled.section`
   text-align: center;
   @media only screen and (min-width: ${variables.breakpointLarge}) {
     display: grid;
-    grid-template-columns: 1fr 1.25fr;
-    grid-gap: 10rem;
+    grid-template-columns: 0.5fr 1.25fr;
+    grid-gap: 5rem;
     text-align: left;
   }
 `
@@ -15,6 +15,9 @@ export const Avatar =styled(Img)`
   border-radius: 5px;
   box-shadow: 0px 0px 64px rgba(0, 0, 0, 0.15);
   width: 100%;
+  @media(max-width: ${variables.breakpointPhone}) {
+    display:none;
+  }
 `
 export const Title = styled.h1`
   font-size: 3rem;
@@ -43,5 +46,6 @@ export const SubTitle = styled.h2`
   word-spacing: 8px;
   @media(min-width: ${variables.breakpointPhone}) {
     font-size: 1.8em;
+    text-align: left;
   }
 `

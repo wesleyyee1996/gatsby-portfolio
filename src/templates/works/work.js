@@ -23,6 +23,7 @@ const portfolioWork = ({data, pageContext, location}) => {
           <div>
             <ArticlePost>
               <header>
+                
                 <Title>
                   {work.frontmatter.title}
                 </Title>

@@ -1,5 +1,5 @@
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
+import { Link, useStaticQuery, graphql , Caption} from "gatsby"
 import {AboutSection, Avatar, Title, Text, SubTitle} from './style';
 import {SectionIntro, ContainerLayout, ResumeButton} from "../common";
 
@@ -22,14 +22,26 @@ const About = () => {
           <AboutSection>
             <div>
               <Avatar fluid={data.placeholderImage.childImageSharp.fluid} alt="user photo" />
+              
             </div> 
             <div>
               <Title> Hi, I’m Wesley </Title>
-              <Text> I love building and creating things! In particular, my interests lie in robotic/mechatronic systems and in my free time I enjoy woodworking.</Text>
-              <Text> I'm currently a first year Robotics M.S.E. student at <b className="text-primary lined-link">The University of Pennsylvania</b>. In 2018, I graduated from <b className="text-primary lined-link">Rice University</b> with a B.S. in Mechanical Engineering.  </Text>
+              <Text> Welcome to my portfolio website, where I've compiled all of my <b className="text-primary lined-link"><Link to="/works">projects</Link></b> past and current. Feel free to browse and learn more about my interests.</Text>
+              <SubTitle>About Me</SubTitle>
+              <ul>
+                <li>
+                <Text> I love building and creating things! In particular, my interests lie in robotic/mechatronic systems. In my free time, I enjoy woodworking, swimming, and exploring the great outdoors.</Text>
+                
+                </li>
+                <li>
+                <Text> I'm currently a first year <b className="text-primary lined-link">Robotics M.S.E.</b> graduate student at The University of Pennsylvania. In 2018, I graduated from Rice University with a <b className="text-primary lined-link">B.S. in Mechanical Engineering</b>.  </Text>
+                </li>
+              </ul>
               
               
-              <ResumeButton href="resume.pdf" target="_blank"> Download resume </ResumeButton>
+              
+              
+              {/* <ResumeButton href="resume.pdf" target="_blank"> Download resume </ResumeButton> */}
             </div>
           </AboutSection>
         </ContainerLayout>
