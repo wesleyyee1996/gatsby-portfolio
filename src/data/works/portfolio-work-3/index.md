@@ -47,6 +47,7 @@ Additionally, as teams score points based on the number of blocks placed on thei
 
 More detailed information can be found in the write-up below.
 
+To view this PDF in a new window, click <a href="https://s3.us-east-2.amazonaws.com/wesleyyee.com/Final.pdf">here</a>.
 
  <object data="https://s3.us-east-2.amazonaws.com/wesleyyee.com/Final.pdf" type="application/pdf" width="100%" height="700px">
     <embed src="https://s3.us-east-2.amazonaws.com/wesleyyee.com/Final.pdf">

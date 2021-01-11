@@ -31,11 +31,14 @@ In the end, the web crawler was able to download ~1.5 million web pages at a pea
 ![alt text](./image4.png)
 This was definitely one of the most challenging projects that I have worked on, but also the most rewarding. Distributed systems has to be one of the most fascinating fields in CS, and I have no doubt that this experience will prove to be extremely beneficial in my future robotics career.
 
-You can view the final project report below:
+You can view the final project report below.
+
+To view this PDF in a new window, click <a href="https://s3.us-east-2.amazonaws.com/wesleyyee.com/555final.pdf">here</a>.
 
  <object data="https://s3.us-east-2.amazonaws.com/wesleyyee.com/555final.pdf" type="application/pdf" width="100%" height="700px">
     <embed src="https://s3.us-east-2.amazonaws.com/wesleyyee.com/555final.pdf">
         <p>This browser does not support PDFs. Please download the PDF to view it: <a href="https://s3.us-east-2.amazonaws.com/wesleyyee.com/555final.pdf">Download PDF</a>.</p>
     </embed>
 </object>
+
 
