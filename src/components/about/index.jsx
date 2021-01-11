@@ -6,9 +6,9 @@ import {SectionIntro, ContainerLayout, ResumeButton} from "../common";
 const About = () => {
   const data = useStaticQuery(graphql`
     query {
-      placeholderImage: file(relativePath: { eq: "profile.webp" }) {
+      placeholderImage: file(relativePath: { eq: "portfolio-icon.png" }) {
         childImageSharp {
-          fluid(maxWidth: 550) {
+          fluid(maxWidth: 10) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -22,7 +22,8 @@ const About = () => {
           <AboutSection>
             <div>
               <Avatar fluid={data.placeholderImage.childImageSharp.fluid} alt="user photo">
-                <img src='https://s3.us-east-2.amazonaws.com/wesleyyee.com/Media/profile.webp' alt='profile' />
+                <img src='https://s3.us-east-2.amazonaws.com/wesleyyee.com/Media/profile.webp' style={{maxWidth: "100%", borderRadius: "5px",
+                boxShadow: "0px 0px 64px rgba(0, 0, 0, 0.15)"}} alt='profile' />
               </Avatar>
             </div> 
             <div>

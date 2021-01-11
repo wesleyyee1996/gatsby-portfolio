@@ -11,8 +11,7 @@ export const AboutSection = styled.section`
     text-align: left;
   }
 `
-export const Avatar =styled(Img)`
-  background-image: 'https://s3.us-east-2.amazonaws.com/wesleyyee.com/Media/profile.webp';
+export const Avatar =styled.div`
   border-radius: 5px;
   box-shadow: 0px 0px 64px rgba(0, 0, 0, 0.15);
   width: 100%;

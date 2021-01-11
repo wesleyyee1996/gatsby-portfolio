@@ -17,7 +17,7 @@ export const FooterStyle = styled.footer`
 		text-align: center;
 	}
 	.quote {
-		font-size: 4rem;
+		font-size: 1rem;
 		font-family: 'Open Sans', sans-serif;
 		line-height: 1.2;
 		color: ${variables.primary};

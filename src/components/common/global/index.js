@@ -14,10 +14,12 @@ export const GlobalStyle = createGlobalStyle`
     -ms-overflow-style: scrollbar;
     line-height: 1.15; /* 1 */
     -webkit-text-size-adjust: 100%; /* 2 */
+    height:100%;
     body {
       font-size: 14px;
       font-family: 'Open Sans', sans-serif;
       margin: 0;
+      
     }
     main {
       display: block;
