@@ -14,7 +14,7 @@ export const NavbarLogo = styled.div`
 
 export const NavbarElement = styled.div`
   display: grid;
-  grid-template-columns: 1fr 0.5fr;
+  grid-template-columns: 1fr .75fr;
   align-items: center;
   @media(max-width: ${variables.breakpointPhone}) {
     grid-template-columns: 1fr;
@@ -26,7 +26,7 @@ export const NavbarElement = styled.div`
 export const NavbarList = styled.ul`
   padding-left: 0;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   list-style: none;
   > li a {
     font-size: 1.2rem;
