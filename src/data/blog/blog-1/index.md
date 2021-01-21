@@ -61,7 +61,7 @@ I was able to implement the tutorials' publish and subscribe examples, which wer
 
 ![alt text](./talkerlistener.png)
 
-Next, it was time to start interfacing with the F1/Tenth programs. The first task was to implement my own node, which I called lidar_sub.cpp, that would subscribe to the "/scan" topic outputted by the 2D Lidar scanner. Afterwards, I added a publisher to the same node which outputted the closest and farthest read points to "/closest\_point" and "/farthest\_point" topics, respectively. I was stuck on this section for a while, since it was initially difficult to get accustomed to ROS's std\_msgs types. 
+Next, it was time to start interfacing with the F1/Tenth programs. The first task was to implement my own node, which I called lidar\_sub.cpp, that would subscribe to the "/scan" topic outputted by the 2D Lidar scanner. Afterwards, I added a publisher to the same node which outputted the closest and farthest read points to "/closest\_point" and "/farthest\_point" topics, respectively. I was stuck on this section for a while, since it was initially difficult to get accustomed to ROS's std\_msgs types. 
 
 The "/furthest\_point" output data is on the left and "/closest\_point" output data is on the right in the image below.
 
@@ -116,3 +116,11 @@ int main(int argc, char **argv)
 }
 
 ```
+Sec. 4 Answers to Questions:
+--------------------------
+1. ROS NodeHandles is the access point for communications with the ROS system. It also allows for an extra namespace layer to specify object names. You can have multiple node handle objects within the same node. You would do this if you wanted to make a private node handle so that you can specify parameters that are relative to the local node for avoiding collisions.
+2. 
+3. ros::spinOnce() and ros::spin() are message callback handlers. The difference is that spinOnce() only executes the callback function once, and if you want to execute it multiple times, then you need to add it within a while or for loop. The main use case is when you want to specify the loop rate, you'd use spinOnce(). On the other hande, spin() is used by itself and executes the same callback functionality as spinOnce, but it automatically loops without an external loop.
+4. ros::rate() sets the frequency with which to execute a loop and is mainly used in conjunction with ros::spinOnce(). For example, setting ros::rate(10) would execute the loop at a rate of 10 Hz, or 10 loops per second.
+5. 
+
