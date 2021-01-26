@@ -30,7 +30,7 @@ From there, I took various measurements in Rviz and found that the zero index wa
 
 Next, I decided to use a simple method of checking the front and back of the car, since it's highly unlikely for the vehicle to collide with a wall on the side due to the non-holonomic nature of the vehicle. I access the float array "ranges" in the LaserScan message. ranges has 1080 indexes, with each index i holding the distance of any object at (i steps)*(6.28319rad)/(1080 steps) radians. Since I only want the front and back sections, I limited the front range to be [400,600], and the back to be [0,100] and [979,1079]. You can see this illustrated in the diagram below.
 
-![alt text](./lab2.webp)
+<img src="https://s3.us-east-2.amazonaws.com/wesleyyee.com/Media/lab2.webp" width="50%">
 
 The TTC is then calculated as:
 
