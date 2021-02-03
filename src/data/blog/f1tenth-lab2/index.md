@@ -4,7 +4,7 @@ categories: ['ros', 'c++', 'python']
 image: './ttc.png'
 imageCredit: https://github.com/f1tenth/f1tenth_labs
 date: "2021-01-26T22:12:03.284Z"
-time: 10
+time: 5
 description: ""
 ---
 
